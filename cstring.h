@@ -25,5 +25,8 @@ public:
 };
 
 CString operator+(const CString& lhs, const CString& rhs);
+// Mixed Arithmetic
+CString operator+(const CString& lhs, const char* rhs);
+CString operator+(const char* lhs, const CString& rhs);
 
 #endif //C_STRING_V3_CSTRING_H
