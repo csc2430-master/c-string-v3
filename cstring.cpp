@@ -106,3 +106,7 @@ CString operator+(const char *lhs, const CString &rhs) {
     tmp += rhs;
     return tmp;
 }
+ostream& operator<<(ostream& lhs, const CString& rhs){
+    lhs << rhs.sz;
+    return lhs;
+}

@@ -5,6 +5,7 @@
 #ifndef C_STRING_V3_CSTRING_H
 #define C_STRING_V3_CSTRING_H
 #include <iostream>
+using std::ostream;
 
 class CString {
     char* sz;
@@ -25,11 +26,15 @@ public:
 
     size_t length()const;
     size_t size()const;
+    friend ostream& operator<<(ostream& lhs, const CString& rhs);
+
+
 };
 
 CString operator+(const CString& lhs, const CString& rhs);
 // Mixed Arithmetic
 CString operator+(const CString& lhs, const char* rhs);
 CString operator+(const char* lhs, const CString& rhs);
+
 
 #endif //C_STRING_V3_CSTRING_H
