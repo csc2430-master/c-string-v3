@@ -19,6 +19,9 @@ public:
     CString& operator+=(const CString& rhs);
     CString& operator+=(const char* rhs);
     char& operator[](size_t index);
+    const char& operator[](size_t index)const;
+
+    bool operator==(const CString&)const;
 
     size_t length()const;
     size_t size()const;
